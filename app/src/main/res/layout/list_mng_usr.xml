@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.CardView"
+        app:cardElevation="10dp"
+        android:layout_marginTop="@dimen/margin_global"
+        android:layout_marginEnd="@dimen/margin_tight"
+        android:layout_marginStart="@dimen/margin_tight">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_global">
+
+            <ImageView
+                android:id="@+id/iv_person"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_person_24dp" />
+
+           <RelativeLayout
+               android:layout_toEndOf="@id/iv_person"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/margin_global">
+
+               <TextView
+                   android:id="@+id/tv_email_usr"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/margin_global"
+                   android:text="email"/>
+
+               <TextView
+                   android:id="@+id/tv_name_usr"
+                   android:layout_below="@id/tv_email_usr"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textStyle="bold"
+                   android:textColor="@color/black"
+                   android:layout_marginTop="@dimen/margin_tight"
+                   android:text="username"/>
+
+               <TextView
+                   android:id="@+id/tv_level_usr"
+                   android:layout_below="@id/tv_name_usr"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/margin_tight"
+                   android:layout_marginBottom="@dimen/margin_global"
+                   android:textColor="@color/black"
+                   android:textAllCaps="true"
+                   android:text="level"/>
+
+           </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

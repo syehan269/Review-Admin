@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_tight"
+        style="@style/Widget.MaterialComponents.CardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_person_review"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_account_circle_black_24dp"
+                android:tint="@color/black"
+                android:layout_marginTop="@dimen/margin_global"
+                android:layout_marginBottom="@dimen/margin_global"
+                android:layout_marginStart="@dimen/margin_sekunder"
+                android:layout_marginEnd="@dimen/margin_sekunder"/>
+
+            <RelativeLayout
+                android:layout_toEndOf="@id/iv_person_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_global"
+                android:layout_marginBottom="@dimen/margin_global"
+                android:layout_marginStart="@dimen/margin_global"
+                android:layout_marginEnd="@dimen/margin_sekunder">
+
+                <TextView
+                    android:id="@+id/tv_name_review"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:text="Nama disini"/>
+
+                <TextView
+                    android:id="@+id/tv_date_review"
+                    android:layout_below="@+id/tv_name_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="tanggal disini"/>
+
+                <TextView
+                    android:id="@+id/tv_rating_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:fontFamily="@font/lato_bold"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="25sp"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_view_review"
+                android:layout_below="@id/iv_person_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="15"
+                android:ellipsize="end"
+                android:textColor="@color/back"
+                android:layout_marginStart="@dimen/margin_sekunder"
+                android:layout_marginEnd="@dimen/margin_sekunder"
+                android:layout_marginBottom="@dimen/margin_global"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

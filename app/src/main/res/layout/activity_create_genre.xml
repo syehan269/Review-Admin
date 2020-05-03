@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".create_genre">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_genre1"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Create Genre"
+        app:titleTextColor="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_global"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_genre1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/iv_genre_create"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:background="@color/back"
+            android:layout_marginTop="@dimen/margin_global"
+            android:layout_marginStart="@dimen/margin_sekunder"
+            android:layout_marginEnd="@dimen/margin_global"/>
+
+        <TextView
+            android:id="@+id/tv_genre_caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_toEndOf="@id/iv_genre_create"
+            android:layout_marginEnd="@dimen/margin_global"
+            android:layout_marginTop="@dimen/margin_tight"
+            android:layout_marginBottom="@dimen/margin_tight"
+            android:textSize="@dimen/text_size_big"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_img_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload IMG"
+            android:layout_toEndOf="@id/iv_genre_create"
+            android:layout_below="@id/tv_genre_caption"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@+id/iv_genre_create"
+            android:layout_marginTop="@dimen/margin_global"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:hintEnabled="true"
+            app:counterMaxLength="40">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_create_genre"
+                android:hint="Enter genre..."
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

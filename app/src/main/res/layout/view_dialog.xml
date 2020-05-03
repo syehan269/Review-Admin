@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sekunder"
+        android:layout_marginEnd="@dimen/margin_global"
+        android:layout_marginBottom="@dimen/margin_global"
+        android:layout_marginTop="@dimen/margin_global"
+        android:textSize="@dimen/text_size_big"
+        android:text="Previous genre: "
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_old_genre"
+        android:layout_toEndOf="@id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textSize="@dimen/text_size_big"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/margin_global"
+        android:ellipsize="end"
+        android:text="KEK"/>
+
+    <EditText
+        android:layout_below="@id/tv_text"
+        android:id="@+id/et_edit_dial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_global"
+        android:layout_marginEnd="@dimen/margin_global"
+        android:layout_marginBottom="@dimen/margin_global"
+        android:hint="Enter here"
+        android:maxLines="1"/>
+
+</RelativeLayout>

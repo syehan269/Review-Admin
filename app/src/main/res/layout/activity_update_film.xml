@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".update_film">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Update Film"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/radius_cardview"
+            app:cardElevation="10dp"
+            android:layout_margin="@dimen/margin_global"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.0">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.CardView"
+                    app:cardCornerRadius="@dimen/radius_cardview"
+                    android:layout_margin="@dimen/margin_global">
+
+                    <ImageView
+                        android:id="@+id/iv_update_film_adm"
+                        android:layout_height="120dp"
+                        android:background="@color/back"
+                        android:scaleType="centerCrop"
+                        android:layout_width="90dp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <RelativeLayout
+                    android:id="@+id/rl_top"
+                    android:layout_marginEnd="@dimen/margin_tight"
+                    android:layout_marginStart="@dimen/margin_global"
+                    android:layout_marginTop="@dimen/margin_global"
+                    android:layout_toEndOf="@+id/cv_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_title_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:hint="Title"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_big"
+                        android:importantForAutofill="no" />
+
+                    <TextView
+                        android:id="@+id/et_date_update"
+                        android:layout_below="@id/et_title_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_global"
+                        android:maxLines="1"
+                        android:importantForAutofill="no" />
+
+                    <Spinner
+                        android:id="@+id/spn_genre_update"
+                        android:layout_below="@id/et_date_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:spinnerMode="dialog"
+                        android:layout_marginTop="@dimen/margin_global"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@id/cv_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_global">
+
+                    <TextView
+                        android:id="@+id/tv_sinopsis_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sinopsis"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/lato_bold"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_below="@id/tv_sinopsis_update"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_global"
+                        app:counterMaxLength="200"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_sinopsis_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Sinopsi"
+                            android:inputType="textMultiLine"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_update_film"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_done_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/margin_sekunder"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

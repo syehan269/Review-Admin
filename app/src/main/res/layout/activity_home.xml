@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/Theme.MaterialComponents.CompactMenu"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_mng_user"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_sekunder"
+            android:paddingBottom="@dimen/margin_sekunder"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/margin_global"
+            android:layout_marginEnd="@dimen/margin_global"
+            android:layout_marginBottom="@dimen/margin_tight"
+            android:text="Manage user" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_mng_rvw"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_mng_user"
+            android:paddingTop="@dimen/margin_sekunder"
+            android:paddingBottom="@dimen/margin_sekunder"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/margin_global"
+            android:layout_marginEnd="@dimen/margin_global"
+            android:layout_marginBottom="@dimen/margin_tight"
+            android:text="Manage review" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_mng_flm"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_mng_rvw"
+            android:paddingTop="@dimen/margin_sekunder"
+            android:paddingBottom="@dimen/margin_sekunder"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/margin_global"
+            android:layout_marginEnd="@dimen/margin_global"
+            android:layout_marginBottom="@dimen/margin_tight"
+            android:text="Manage film" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_mng_gnr"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_mng_flm"
+            android:paddingTop="@dimen/margin_sekunder"
+            android:paddingBottom="@dimen/margin_sekunder"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/margin_global"
+            android:layout_marginEnd="@dimen/margin_global"
+            android:layout_marginBottom="@dimen/margin_tight"
+            android:text="Manage genre" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_mng_rep"
+            android:layout_below="@id/btn_mng_gnr"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_sekunder"
+            android:paddingBottom="@dimen/margin_sekunder"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/margin_global"
+            android:layout_marginEnd="@dimen/margin_global"
+            android:layout_marginBottom="@dimen/margin_tight"
+            android:text="Manage report" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "403215312384",
+    "firebase_url": "https://moex-33b99.firebaseio.com",
+    "project_id": "moex-33b99",
+    "storage_bucket": "moex-33b99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403215312384:android:5a0940a05f6bc328531ae5",
+        "android_client_info": {
+          "package_name": "com.example.reviewadm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403215312384-1t08sj8orbeu7ubqvqonto5e06dp80i0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.reviewadm",
+            "certificate_hash": "04b573406962803abde7db954dfb8e93eea85e9d"
+          }
+        },
+        {
+          "client_id": "403215312384-qbmlk7n0tnks86rao08ggblbv29e10h3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASrVJQUI6r9UaokzMeoBA19j4v1wN2zYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403215312384-qbmlk7n0tnks86rao08ggblbv29e10h3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

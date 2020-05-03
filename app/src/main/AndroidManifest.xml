@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.reviewadm">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".update_pas"
+            android:parentActivityName=".manage_profile"/>
+        <activity android:name=".manage_profile"
+            android:parentActivityName=".home"/>
+        <activity
+            android:name=".view_report"
+            android:parentActivityName=".manage_report" />
+        <activity
+            android:name=".manage_report"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".create_genre"
+            android:parentActivityName=".manage_gnr" />
+        <activity android:name=".query" />
+        <activity
+            android:name=".manage_review"
+            android:parentActivityName=".home" />
+        <activity android:name=".update_film" />
+        <activity
+            android:name=".view_film"
+            android:parentActivityName=".manage_film" />
+        <activity
+            android:name=".create_film"
+            android:parentActivityName=".manage_film" />
+        <activity
+            android:name=".manage_film"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".manage_gnr"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".manage_usr"
+            android:parentActivityName=".home" />
+        <activity android:name=".home" />
+        <activity
+            android:name=".register"
+            android:parentActivityName=".login" />
+        <activity
+            android:name=".forget"
+            android:parentActivityName=".login" />
+        <activity android:name=".login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

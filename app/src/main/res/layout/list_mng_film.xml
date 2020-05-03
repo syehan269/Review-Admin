@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_tight"
+        android:layout_marginEnd="@dimen/margin_tight"
+        android:layout_marginTop="@dimen/margin_tight">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_global">
+
+            <ImageView
+                android:id="@+id/iv_list_film"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:background="@color/white"/>
+
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/iv_list_film"
+                android:layout_marginEnd="@dimen/margin_global"
+                android:layout_marginStart="@dimen/margin_global"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_title_film"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TItle"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_below="@id/tv_date_film"
+                    android:id="@+id/tv_genre_film"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_big"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/margin_global"
+                    android:text="genre"/>
+
+                <TextView
+                    android:layout_below="@+id/tv_title_film"
+                    android:id="@+id/tv_date_film"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_tight"
+                    android:text="DAte"
+                    android:textSize="@dimen/text_size_big"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
